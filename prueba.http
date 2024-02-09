@@ -1,0 +1,58 @@
+POST https://jsonplaceholder.typicode.com/users
+Content-Type: application/json
+
+{
+  "id": 25,
+  "name": "John Doe",
+  "username": "john_doe",
+  "email": "john.doe@example.com",
+  "address": {
+    "street": "123 Main Street",
+    "suite": "Apt. 101",
+    "city": "Anytown",
+    "zipcode": "12345",
+    "geo": {
+      "lat": "40.7128",
+      "lng": "-74.0060"
+    }
+  },
+  "phone": "555-555-5555",
+  "website": "example.com",
+  "company": {
+    "name": "Example Inc.",
+    "catchPhrase": "Lorem ipsum dolor sit amet",
+    "bs": "Ut enim ad minim veniam"
+  }
+}
+
+###
+
+PUT https://jsonplaceholder.typicode.com/users/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Updated Name",
+  "username": "updated_username",
+  "email": "updated.email@example.com",
+  "address": {
+    "street": "Updated Street",
+    "suite": "Updated Suite",
+    "city": "Updated City",
+    "zipcode": "12345",
+    "geo": {
+      "lat": "40.7128",
+      "lng": "-74.0060"
+    }
+  },
+  "phone": "555-555-5555",
+  "website": "updated-example.com",
+  "company": {
+    "name": "Updated Company",
+    "catchPhrase": "Updated catchPhrase",
+    "bs": "Updated bs"
+  }
+}
+
+###
+DELETE https://jsonplaceholder.typicode.com/users/1
