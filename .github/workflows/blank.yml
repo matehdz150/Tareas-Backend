@@ -1,4 +1,4 @@
-name: impriir Info
+name: Imprimir Info
 
 on: [push, pull_request]
 
@@ -10,12 +10,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Print name and version
+    - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '16.x'
+
+    - name: Print name and version
       run: |
-        echo "Mi nombre es: Mateo Hernandez"
+        echo "Mi nombre completo es: Mateo Hernandez"
         echo "La versión de Node utilizada es: ${{ env.NODE_VERSION }}"
         echo "Mi expediente es: 742023"
+
 
