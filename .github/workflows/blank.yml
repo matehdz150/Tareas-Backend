@@ -1,0 +1,21 @@
+name: impriir Info
+
+on: [push, pull_request]
+
+jobs:
+  print-info:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Print name and version
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+      run: |
+        echo "Mi nombre es: Mateo Hernandez"
+        echo "La versión de Node utilizada es: ${{ env.NODE_VERSION }}"
+        echo "Mi expediente es: 742023"
+
