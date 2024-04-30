@@ -11,17 +11,14 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Node.js
-      run: |
-        echo "Configurando Node.js..."
-        sudo apt-get update && sudo apt-get install -y nodejs npm
-        node -v
-        npm -v
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
 
     - name: Print name and version
       run: |
-        echo "Mi nombre completo es: Mateo Hernandez"
-        echo "La versión de Node utilizada es: $(node -v)"
-        echo "Mi expediente es: 742023"
-
+        echo "Mi nombre completo es: [Tu nombre completo]"
+        echo "La versión de Node utilizada es: ${{ env.NODE_VERSION }}"
+        echo "Mi expediente es: [Tu expediente]"
 
 
